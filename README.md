@@ -24,7 +24,8 @@ We should be able to initialize a new empty MySet, or one with an iterable, such
 
 ```
 // Values in Hash omitted for conciseness
-new MySet() => MySet(data = {})
+new MySet() 
+=> MySet(data = {})
 new MySet(Array [1, 2, 1, 3]) 
 => MySet(data = {1, 2, 3})
 new MySet(String 'hello') 
