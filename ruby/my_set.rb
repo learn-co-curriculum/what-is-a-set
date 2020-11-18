@@ -1,4 +1,5 @@
 class MySet 
+  attr_reader :data
   # throw an error if called with anything other than string, array or nothing
   # if an iterable is provided only its unique values should be in data
   # strings and arrays will need to be broken down by their elements/characters

@@ -1,4 +1,4 @@
-require '../solutions/my_set'
+require './my_set'
 
 RSpec.describe 'MySet' do
   let(:empty_set) { MySet.new }
@@ -27,7 +27,8 @@ RSpec.describe 'MySet' do
 
   context '#add(item)' do
     it 'adds the item to the set' do
-      expect(empty_set.add('cat').data['cat']).to eq(true)
+      empty_set.add('cat')
+      expect(empty_set.data['cat']).to eq(true)
     end
 
     it 'returns the instance of MySet' do
