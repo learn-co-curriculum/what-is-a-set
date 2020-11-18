@@ -16,6 +16,8 @@ set = new Set from array
 
 We have already declared a class called `MySet` in the starter files and provided the underlying data structure: a Hash/Object called `data`. You'll need to build out all of the methods. Do not worry about the ordering of items in the Set. They can be in any order.
 
+Be aware that these methods may go by different names in different languages. This is one way to implement a Set, there are others! We are basing our's on JavaScript's Set class.
+
 ### Initialization, e.g. `constructor(iterable)` or `#initialize(iterable)`
 
 We should be able to initialize a new empty MySet, or one with an iterable, such as an Array or String. When a new MySet is initialized with an Array or String, only its unique contents should be added to MySet. Use a value of `true` for each key: `{ 'dog' => true }`.
