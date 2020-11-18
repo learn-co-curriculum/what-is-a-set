@@ -20,16 +20,16 @@ Be aware that these methods may go by different names in different languages. Th
 
 ### Initialization, e.g. `constructor(iterable)` or `#initialize(iterable)`
 
-We should be able to initialize a new empty MySet, or one with an iterable, such as an Array or String. When a new MySet is initialized with an Array or String, only its unique contents should be added to MySet. Use a value of `true` for each key: `{ 'dog' => true }`.
+We should be able to initialize a new empty MySet, or one with an iterable, such as an Array or String. When a new MySet is initialized with an Array or String, only its unique contents should be added to MySet. Use a value of `true` for each key: `{ dog: true }`.
 
 ```
 // Values in Hash omitted for conciseness
 new MySet() 
-=> MySet(data = {})
+=> MySet data = {}
 new MySet(Array [1, 2, 1, 3]) 
-=> MySet(data = {1, 2, 3})
+=> MySet data = {1, 2, 3}
 new MySet(String 'hello') 
-=> MySet(data = {'h', 'e', 'l', 'o'})
+=> MySet data = {'h', 'e', 'l', 'o'}
 ```
 
 An error should be thrown if a user tries to initialize a new MySet with anything other than nothing, a String or an Array. 
@@ -45,13 +45,13 @@ Add an item to a MySet instance. Remember, only unique items should exist in MyS
 ```
 my_set = new MySet()
 my_set.add('caat')
-=> MySet(data = { 'caat' })
+=> MySet data = { 'caat' }
 
 next_set = new MySet('doooog')
 next_set.add('caarp')
-=> MySet(data = { 'd', 'o', 'g', 'caarp' })
+=> MySet data = { 'd', 'o', 'g', 'caarp' }
 next_set.add(12)
-=> MySet(data = { 'd', 'o', 'g', 'caarp', 12 })
+=> MySet data = { 'd', 'o', 'g', 'caarp', 12 }
 ```
 
 ***Note on JS: Arrays cannot be keys for JS Objects. They will be converted to strings by default like so: `[1, 2] => '1,2'`. Don't worry about this. We'll ensure our tests allow for this. For now, just be aware that actual Sets most certainly can handle Arrays!***
@@ -62,8 +62,10 @@ Removes the item from the MySet instance. If the removal was successful, return 
 
 ```
 my_set = new MySet('aabb')
-my_set.delete('a') => true
-my_set.delete('z') => false
+my_set.delete('a') 
+=> true
+my_set.delete('z') 
+=> false
 ```
 
 ***Note on JS: Don't worry about handling Arrays here!***
@@ -80,7 +82,8 @@ Returns an Array containing all of the values in the MySet instance.
 
 ```
 my_set = new MySet('aabb')
-my_set.entries() => ['a', 'b']
+my_set.entries() 
+=> ['a', 'b']
 ```
 
 ***Note on JS: Don't worry about handling Arrays (which were meant to be keys in `this.data`) here!***
