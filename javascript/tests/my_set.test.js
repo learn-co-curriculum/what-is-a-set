@@ -1,4 +1,4 @@
-const MySet = require('../../solutions/my_set');
+const MySet = require('../my_set');
 
 let emptySet = new MySet();
 let dataSet = new MySet('hello');
