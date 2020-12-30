@@ -1,4 +1,4 @@
-const MySet = require('../my_set');
+const MySet = require('../../solutions/my_set');
 
 let emptySet = new MySet();
 let dataSet = new MySet('hello');
@@ -14,7 +14,7 @@ test('initialize(iterator = nil) populates @data with keys when given an Array o
   const sortedArraySet = Object.keys(arraySet.data).sort();
   const sortedDataSet = Object.keys(dataSet.data).sort();
   
-  expect(JSON.stringify(sortedArraySet)).toBe("[\"1\",\"2\",\"3\"]");
+  expect(sortedArraySet).toEqual(["1", "2", "3"]);
   expect(sortedDataSet.join('')).toBe('ehlo');
 });
 
